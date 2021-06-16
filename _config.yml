@@ -3,9 +3,12 @@ author:
   name: hhlee
   email: hhlee@avpkr.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  iBM Db2
+  IBM Db2
 
 show_excerpts: false # set to true to show excerpts on the homepage
+
+category_dir: categories/
+categories: [db2, ibm]
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
