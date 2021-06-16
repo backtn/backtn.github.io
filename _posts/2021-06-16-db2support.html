@@ -1,0 +1,24 @@
+<pre>
+1) Collect data while the database is responsive
+db2support <outputdir> –d <dbname> -c –s -g
+-s  -system_detail,   hardware and OS 
+-m  -html          HTML format
+-ps -purescale     -cm -cfs and -udapl 옵션을 한번에
+-sdir 임시작업 dir
+-cl -collect Specify the optimization data collection level
+  0 =  catalogs, db2look, dbcfg, dbmcfg, db2set
+  1 = 0 +db2exfmt, db2caem(if -aem or event monitor options are specified)
+  2 = 1 +.db2service (DEFAULT)
+  3 = 2 +db2batch
+-co -complete      Collect catalogs for all tables in database
+ -cs -curschema     Specify the current schema value
+
+2) Collect data while a database hang is suspected
+db2support <outputdir> –d <dbname> –s -g
+
+3) Collect data for a reproducible query performance problem:
+db2support <outputdir> -d <dbname> -sf <sqlfile> -cl 1
+
+Note: The “-c” switch allows db2support to connect to the database. This is not desirable during suspected database hangs.
+
+</pre>
